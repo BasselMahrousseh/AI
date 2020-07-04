@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b46e6cda-e109-49a9-a826-4e997bf93ae7</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>AIMS.py</StartupFile>
+    <StartupFile>Model1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,9 +25,23 @@
     <Compile Include="Basel.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="defs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model1.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Nour.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Testing.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shell Script.sh">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
