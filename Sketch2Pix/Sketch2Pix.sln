@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29102.190
+VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "AIMS", "AIMS\AIMS.pyproj", "{B46E6CDA-E109-49A9-A826-4E997BF93AE7}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Sketch2Pix", "Sketch2Pix\Sketch2Pix.pyproj", "{182AF608-CF4A-4835-8A46-A4B0077E0256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B46E6CDA-E109-49A9-A826-4E997BF93AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B46E6CDA-E109-49A9-A826-4E997BF93AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{182AF608-CF4A-4835-8A46-A4B0077E0256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{182AF608-CF4A-4835-8A46-A4B0077E0256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {53ACC9F3-CB21-46A3-A5B0-3568291BCE15}
+		SolutionGuid = {B9F0F71E-B125-49B6-A617-E2A52B43C749}
 	EndGlobalSection
 EndGlobal
