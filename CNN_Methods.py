@@ -45,18 +45,21 @@ def CNN_train(model,EPOCHS ,train_ds,val_ds):
 
 
 
-def CNN_Laod_batch(img_array ,img_path, img_height, img_width):
-    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode='grayscale')
+def CNN_Laod_batch(img_array ,img_path, img_height, img_width,image_type):
+    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode=image_type)
     img_array = tf.keras.preprocessing.image.img_to_array(img)
 
 #######Predict#######
-def CNN_single_predict(img_path, img_height, img_width, model,class_names):
-    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode='grayscale')
+def CNN_single_predict(img_path, img_height, img_width, model,class_names,image_type):
+    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode=image_type)
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0) # Create a batch
     print(img_array.shape)
     predictions = model.predict(img_array)
     score = tf.nn.softmax(predictions[0])
+    print(
+        "This image most likely belongs to {} with a {:.2f} percent confidence."
+        .format(class_names[np.argmax(score)], 100 * np.max(score)))
 
 def CNN_batch_predict_Print(batch, model,class_names):
     predictions = model.predict(batch)
@@ -93,8 +96,8 @@ def cam_to_tensor(images):
     return batch
 
 
-def path_to_tensor(img_path,img_height, img_width):
-    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode='grayscale')
+def path_to_tensor(img_path,img_height, img_width,image_type):
+    img = tf.keras.preprocessing.image.load_img(img_path, target_size=(img_height, img_width),color_mode=image_type)
     img_array = tf.keras.preprocessing.image.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0) # Create a batch
     return img_array
