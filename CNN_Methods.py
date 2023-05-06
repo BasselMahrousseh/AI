@@ -20,9 +20,6 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
 
-
-
-
 def CNN_train(model,EPOCHS ,train_ds,val_ds):
     checkpoint_filepath =os.getcwd() + '/Checkpoints/weights.{epoch:02d}-{val_loss:.2f}.h5'
     #checkpoint_filepath = os.getcwd() + r'\\Weights'
